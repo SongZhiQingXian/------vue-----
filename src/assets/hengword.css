@@ -1,0 +1,37 @@
+.containerblue {
+  height: 500px;
+
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  top: 20px;
+  float: right;
+  right: 160px;
+  font-size: 15px;
+  line-height: 30px;
+  word-spacing: 0;
+ 
+  /* border: 2px solid #fff; */
+}
+
+.containerblue ul {
+  width: 350px;
+  transform: 0.6s;
+  list-style: none;
+  text-align: center;
+
+}
+
+.containerblue li {
+  line-height: 80px;
+  transition: 0.2s;
+  width: 350px;
+
+}
+
+.containerblue li.active {
+  color: #ffffff;
+
+
+  transform: scale(1.1);
+}

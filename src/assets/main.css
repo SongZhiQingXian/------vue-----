@@ -1,0 +1,282 @@
+@import url(../assets/songword.css);
+@import url(../assets/hengword.css);
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+/* 绿色点击特效 */
+.span1{
+  position: absolute;
+  pointer-events:none ;
+ z-index: 10;
+ width: 32px;
+ height: 32px;
+
+  animation: fade-in-out 1s linear;
+  background-size: contain;
+}
+@keyframes fade-in-out {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.span1::before {
+  content: "";
+
+  position: absolute;
+  background: url(../img/zuzi.png);
+  animation: path 1s linear ;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+
+}
+
+@keyframes path {
+  0%{
+    transform: translate(0) rotate(0deg);
+  }
+
+  100%{
+    transform: translate(100px) rotate(360deg);
+  }
+}
+/* 蓝色点击特效 */
+.span2{
+  position: absolute;
+  pointer-events:none ;
+ z-index: 10;
+ width: 32px;
+ height: 32px;
+
+  animation: fade-in-out 1s linear;
+  background-size: contain;
+}
+.span2::before {
+  content: "";
+
+  position: absolute;
+  background: url(../img/shangDing.png);
+  animation: path 1s linear ;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+
+}
+/* 粉色点击特效 */
+.span3{
+  position: absolute;
+  pointer-events:none ;
+ z-index: 10;
+ width: 32px;
+ height: 32px;
+
+  animation: fade-in-out 1s linear;
+  background-size: contain;
+}
+.span3::before {
+  content: "";
+
+  position: absolute;
+  background: url(../img/heart.png);
+  animation: path 1s linear ;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+
+}
+/* 音乐滑动条 */
+.controls .el-slider__bar{
+  background-color: rgb(185, 222, 201);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.controls  .el-slider__button {
+  border: 4px solid rgb(185, 222, 201);
+  opacity: 0;
+  background-color: #FFFFFF;
+  /* 测试 */
+  margin-left: 5px;
+}
+.controls .el-slider__button:hover{
+  opacity: 1;
+}
+
+.controlspink .el-slider__bar{
+  background-color: rgb(241, 147, 156);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5)
+}
+
+.controlspink  .el-slider__button {
+  border: 4px solid rgb(240, 201, 207);
+  opacity: 0;
+  background-color: #FFFFFF;
+  /* 测试 */
+  margin-left: 5px;
+}
+.controlspink .el-slider__button:hover{
+  opacity: 1;
+}
+.controlsblue .el-slider__bar{
+  background-color: rgb(147, 181, 207);
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.8);
+}
+
+.controlsblue .el-slider__button {
+  border: 4px solid rgb(147, 181, 207);
+  opacity: 0;
+  background-color: #FFFFFF;
+  /* 测试 */
+  margin-left: 5px;
+}
+.controlsblue .el-slider__button:hover{
+  opacity: 1;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+.container1 {
+  /* 弹性布局 */
+  display: flex;
+  /* 允许换行 */
+  flex-wrap: wrap;
+  /* 将元素靠边对齐 */
+  justify-content: space-around;
+}
+
+.container1 .btn {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  margin: 15px;
+}
+
+.container1 .btn a {
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 透明度为0.05的白色背景 */
+  background: rgba(255, 255, 255, 0.05);
+  /* 阴影 */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  /* 上下边框 */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* 圆角 */
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  /* 字间距 */
+  letter-spacing: 1px;
+  /* 去下划线 */
+  text-decoration: none;
+  /* 动画过渡 */
+  transition: 0.5s;
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 背景模糊 */
+  backdrop-filter: blur(15px);
+}
+
+.container1 .btn:hover a {
+  letter-spacing: 5px;
+}
+
+/* 制作扫光效果 */
+.container1 .btn a::before {
+  content: "";
+  /* 绝对定位 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /* 渐变背景 透明到白色 */
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15));
+  /* 沿X轴倾斜45度，向右平移0像素 */
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.container1 .btn:hover a::before {
+  /* 沿X轴倾斜45度，向右平移200% */
+  transform: skewX(45deg) translateX(200%);
+}
+
+/* 制作按钮上下两个发光层 */
+.container1 .btn::before,
+.container1 .btn::after {
+  content: "";
+  /* 绝对定位，横向居中 */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 10px;
+  /* 自定义颜色属性--c, 可通过var函数调用 */
+  /* --c: gold; */
+  background: var(--c);
+  border-radius: 5px;
+  box-shadow:
+      0 0 5px var(--c),
+      0 0 15px var(--c),
+      0 0 30px var(--c),
+      0 0 60px var(--c);
+  transition: 0.5s;
+}
+
+.container1 .btn::before {
+  bottom: -5px;
+}
+
+.container1 .btn::after {
+  top: -5px;
+}
+
+.container1 .btn:hover::before,
+.container1 .btn:hover::after {
+  height: 50%;
+  width: 80%;
+  border-radius: 15px;
+ 
+}
+
+.container1 .btn:hover::before {
+  bottom: 0;
+}
+
+.container1 .btn:hover::after {
+  top: 0;
+}
+
+/* 分别设置自定义颜色属性--c */
+.container1 .btn:nth-child(1)::before,
+.container1 .btn:nth-child(1)::after {
+  --c: #83a78d;
+}
+
+.container1 .btn:nth-child(2)::before,
+.container1 .btn:nth-child(2)::after {
+  --c: rgb(241, 147, 156)
+}
+
+.container1 .btn:nth-child(3)::before,
+.container1 .btn:nth-child(3)::after {
+  --c: #475164;
+}

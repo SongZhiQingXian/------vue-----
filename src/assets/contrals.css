@@ -1,0 +1,210 @@
+/* 点击效果 */
+
+/* 控件 */
+.controls {
+  transform: translate(-50%);
+  left: 50%;
+  position: relative;
+  border-radius: 50px;
+  border: #ffffff solid 3px;
+  top: 11px;
+  width: 95%;
+  height: 60px;
+
+}
+
+#wrapperg {
+  
+  position: relative;
+  background-color: rgb(131, 167, 141);
+  background-image: url(../src/img/texture.png);
+}
+
+.imgg {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 8%;
+  top: 43%;
+  animation: rotate 0.6s infinite normal linear forwards;
+  transition: filter 0.3s;
+}
+
+.imgg:hover {
+  animation-play-state: paused;
+  /* filter: grayscale(10) sepia(100%) hue-rotate(135deg) brightness(0.8) saturate(1.5); */
+   filter: contrast(175%) drop-shadow(0px 0px 40px rgb(73,117,104));
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.firstcontrols {
+  width: 100%;
+  height: 88px;
+  position: relative;
+}
+
+/* 滚动条 */
+.slider_c {
+  top: 20px;
+  width: 70%;
+  left: 3%;
+
+  position: absolute;
+  display: flex;
+
+  height: 20px;
+  justify-content: space-between;
+
+}
+
+.slider_c3 {
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  display: block;
+}
+
+.slider_c2 {
+  height: 20px;
+  width: 88%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.slider_c1 {
+  position: absolute;
+  height: 20px;
+  display: block;
+  left: 10px;
+}
+
+.control_s {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0px;
+  width: 25%;
+  height: 60px;
+  align-items: center;
+}
+
+/* 开关 */
+.button_sc {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 50px;
+  background-color: rgb(131,167,141);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.button_sc:hover {
+  background-color: rgb(185, 222, 201);
+}
+
+/* 音量 */
+.button_Sound {
+  position: absolute;
+  left: 15%;
+  transform: translate(-50%);
+  height: 60px;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button_Sound1 {
+
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+
+
+}
+
+.button_Sound2 {
+
+  width: 50px;
+  height: 20px;
+
+}
+
+/* 重新播放 */
+.button_load {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 90%;
+  transform: translate(-50%);
+}
+
+/* 上下 */
+.move_back {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 35%;
+  transform: translate(-50%);
+}
+
+.move_next {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 65%;
+  transform: translate(-50%);
+}
+
+.move_next:active {
+  color: #61915d;
+}
+
+.move_back:active {
+  color: #61915d;
+}
+
+.button_load:active {
+  color: #61915d;
+}
+
+.slider-demo-block {
+  display: flex;
+  align-items: center;
+}
+
+.slider-demo-block .el-slider {
+  margin-top: 0;
+  margin-left: 12px;
+}
+
+.slider-demo-block .demonstration {
+  font-size: 14px;
+  color: var(--el-text-color-secondary);
+  line-height: 44px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.slider-demo-block .demonstration+.el-slider {
+  flex: 0 0 70%;
+}

@@ -1,0 +1,234 @@
+.controlspink {
+  transform: translate(-50%);
+  left: 50%;
+  top: 11px;
+  position: relative;
+  border-radius: 50px;
+  border: #ffffff solid 3px;
+
+  width: 95%;
+  height: 60px;
+
+}
+
+#wrapperp {
+  height: 1500px;
+  position: relative;
+  background-color: rgb(241, 147, 156);
+  background-image: url(../src/img/texture.png);
+}
+
+.opengame {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  left: 50%;
+  top: 70%;
+  animation: rotatep 2.4s infinite normal linear forwards;
+}
+
+.opengame:hover {
+  animation-play-state: paused;
+  filter: contrast(600%) drop-shadow(0px 0px 20px rgb(237,47,106));
+
+}
+
+@keyframes rotatep {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.secondcontrols {
+  z-index: 3;
+
+  position: relative;
+
+  width: 100%;
+  height: 88px;
+
+}
+
+/* 滚动条 */
+.slider_c {
+  z-index: 3;
+  top: 20px;
+  width: 70%;
+  left: 3%;
+
+  position: absolute;
+  display: flex;
+
+  height: 20px;
+  justify-content: space-between;
+
+}
+
+.slider_c3 {
+
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  display: block;
+}
+
+.slider_c2 {
+  height: 20px;
+  width: 88%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+}
+
+.slider_c1 {
+
+  position: absolute;
+  height: 20px;
+  display: block;
+  left: 10px;
+
+
+}
+
+.control_s {
+
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0px;
+  width: 25%;
+  height: 60px;
+  align-items: center;
+
+}
+
+/* 开关 */
+.button_sc {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 50px;
+  background-color: rgb(241, 147, 156);
+  opacity: 0.5;
+  border-radius: 50%;
+
+}
+
+.button_sc:hover {
+  background-color: rgb(240, 201, 207);
+}
+
+/* 音量 */
+.button_Sound {
+  position: absolute;
+  left: 15%;
+
+  transform: translate(-50%);
+  height: 60px;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button_Sound1 {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+}
+
+.button_Sound2 {
+  width: 50px;
+  height: 20px;
+}
+
+/* 重新播放 */
+.button_load {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 90%;
+  transform: translate(-50%);
+}
+
+/* 上下 */
+.move_back {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 35%;
+  transform: translate(-50%);
+}
+
+.move_next {
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 30px;
+  position: absolute;
+  left: 65%;
+  transform: translate(-50%);
+}
+
+.move_next:active {
+  color: #61915d;
+}
+
+.move_back:active {
+  color: #61915d;
+}
+
+.button_load:active {
+  color: #61915d;
+}
+
+.slider-demo-block {
+  display: flex;
+  align-items: center;
+}
+
+.slider-demo-block .el-slider {
+  margin-top: 0;
+  margin-left: 12px;
+}
+
+.slider-demo-block .demonstration {
+  font-size: 14px;
+  color: var(--el-text-color-secondary);
+  line-height: 44px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.slider-demo-block .demonstration+.el-slider {
+  flex: 0 0 70%;
+}
+
+.el-slider__bar {
+  background-color: #0c1ad7;
+}
+
+.el-slider__button {
+  border: 4px solid #141ac6;
+  opacity: 0;
+  background-color: #FFFFFF;
+  /* 测试 */
+  margin-left: 5px;
+}
+
+.el-slider__button:hover {
+  opacity: 1;
+}
